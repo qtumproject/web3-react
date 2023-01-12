@@ -423,37 +423,37 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.3.4.tgz#d28ea15a72cdcf96201c60a43e9630cd7fda168f"
   integrity sha512-DQ20JEfTBZAgF8QCjYfJhv2/279M6onxFjdG/+5B0Cyj00/EdBxiWb2eGGFgQhrBbNv/lsvzFbbi0Ptf8Vw/bg==
 
-"@qtum-web3-react/abstract-connector@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/abstract-connector/-/abstract-connector-0.1.2.tgz#83cb5a978a2665f03a75f533d4729166a5a80fa6"
-  integrity sha512-HHZ9jPKMYHVRXJExO5YN+wo4WexaD7MligbXNPsumk/dlSsZR3rZTJwsygi9MEyrn1DbVM3vqmFwKcHm6mgTRg==
+"@qtum-web3-react/abstract-connector@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/abstract-connector/-/abstract-connector-0.0.2.tgz#99067bdba1287f42f2db550b966d3c3e5b3cd429"
+  integrity sha512-jTzjpxPB2qu/Qx+Iul8P7JY8xwQmZG2sR/wAgn4LcvmKv1QEkBNQRq55kWmQIwCBxy13dDzSVN7B00eqLVCMfQ==
   dependencies:
-    "@qtum-web3-react/types" "^0.1.0"
+    "@qtum-web3-react/types" "^0.0.2"
 
 "@qtum-web3-react/core@latest":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-0.1.2.tgz#9423ce904f816e083dd93018d1bb5d4158c16796"
-  integrity sha512-hfO3vXZG9xhRRfoLAJxQmD/HdZKImrIZmLbcw427dYh/OY9rAOgOvdEriMu8hdUb4/UUMLLofywLOe5pt591gQ==
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-0.0.2.tgz#5c3782424e93ed528cf25ef1bf3ef0b8eb9b4558"
+  integrity sha512-hdUWZwGNK+3KclEh848L4pCP4o/CB17KFd9JwSzdkc4/nCDlbO3V0LuFLSfhGrY1aPVdUBBsbYs5onh9uJ4HvQ==
   dependencies:
     "@ethersproject/keccak256" "^5.0.0-beta.130"
-    "@qtum-web3-react/abstract-connector" "^0.1.2"
-    "@qtum-web3-react/types" "^0.1.0"
+    "@qtum-web3-react/abstract-connector" "^0.0.2"
+    "@qtum-web3-react/types" "^0.0.2"
     tiny-invariant "^1.0.6"
     tiny-warning "^1.0.3"
 
 "@qtum-web3-react/injected-connector@latest":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-0.1.2.tgz#a884ec0d375363c7d0b9589563cce6425a520a26"
-  integrity sha512-jYEpUplVVd8vIZCv0a+6RDGjepDqGqdmr6kJHlUHLV2yn3aMhZ/Y+Urmp35ooCC7NA+NalaEKk6lODFrn9LxVg==
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-0.0.2.tgz#fff845a24de6680702b8e9611bd53ea2718133e9"
+  integrity sha512-M9JcKJQkgASY0LhUOWhFUnlpIP0OiN4DXYfTiec49F3aBaI3j4nFOzta6iIn7fgDbZLeJ9fggs1RvWeURdH0Rg==
   dependencies:
-    "@qtum-web3-react/abstract-connector" "^0.1.2"
-    "@qtum-web3-react/types" "^0.1.0"
+    "@qtum-web3-react/abstract-connector" "^0.0.2"
+    "@qtum-web3-react/types" "^0.0.2"
     tiny-warning "^1.0.3"
 
-"@qtum-web3-react/types@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/types/-/types-0.1.1.tgz#ea7ed6d6f779b3b79b8a761ea6248bd271d15b7a"
-  integrity sha512-V6yr5PIojqrrnQ2WoP6upWOGb0CIGTEOcFJaL31oQrtSVO2/lcHb0Tj6wUbJAQv8u8X2cGhwPt1J9jgy9PCc+Q==
+"@qtum-web3-react/types@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/types/-/types-0.0.2.tgz#95b2355ed6a7cb02f860b335715416433c0c5ba7"
+  integrity sha512-DSogue8O0E4MWT0zx+NtZuuWUoFWOsmRDr0ee1BFfYEmKebgwIHxuoMp2t9uNeenE7VgSVzs8U6dUtrFHbMeVQ==
 
 "@swc/helpers@0.4.11":
   version "0.4.11"
@@ -488,9 +488,9 @@ brorand@^1.1.0:
   integrity sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==
 
 caniuse-lite@^1.0.30001406:
-  version "1.0.30001441"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001441.tgz#987437b266260b640a23cd18fbddb509d7f69f3e"
-  integrity sha512-OyxRR4Vof59I3yGWXws6i908EtGbMzVUi3ganaZQHmydk1iwDhRnvaPG2WaR0KcqrDFKrxVZHULT396LEPhXfg==
+  version "1.0.30001443"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001443.tgz#8fc85f912d5471c9821acacf9e715c421ca0dd1f"
+  integrity sha512-jUo8svymO8+Mkj3qbUbVjR8zv8LUGpGkUM/jKvc9SO2BvjCI980dp9fQbf/dyLs6RascPzgR4nhAKFA4OHeSaA==
 
 elliptic@6.5.4:
   version "6.5.4"
