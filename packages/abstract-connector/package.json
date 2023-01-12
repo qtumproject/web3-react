@@ -34,7 +34,7 @@
     "lint": "tsdx lint src"
   },
   "dependencies": {
-    "@qtum-web3-react/types": "latest"
+    "@qtum-web3-react/types": "^0.0.1"
   },
   "license": "GPL-3.0-or-later"
 }
