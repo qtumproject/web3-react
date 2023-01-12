@@ -1,4 +1,4 @@
-interface Ethereum {
+interface Qtum {
   send: unknown
   enable: () => Promise<string[]>
   on?: (method: string, listener: (...args: any[]) => void) => void
@@ -6,7 +6,7 @@ interface Ethereum {
 }
 
 declare interface Window {
-  ethereum?: Ethereum
+  qtum?: Qtum
 }
 
 declare const __DEV__: boolean

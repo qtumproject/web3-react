@@ -1,75 +1,35 @@
 import React from 'react'
-import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
+import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@qtum-web3-react/core'
 import {
   NoEthereumProviderError,
   UserRejectedRequestError as UserRejectedRequestErrorInjected
-} from '@web3-react/injected-connector'
-import { UserRejectedRequestError as UserRejectedRequestErrorWalletConnect } from '@web3-react/walletconnect-connector'
-import { UserRejectedRequestError as UserRejectedRequestErrorFrame } from '@web3-react/frame-connector'
-import { Web3Provider } from '@ethersproject/providers'
+} from '@qtum-web3-react/injected-connector'
+import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { formatEther } from '@ethersproject/units'
 
 import { useEagerConnect, useInactiveListener } from '../hooks'
-import {
-  injected,
-  network,
-  walletconnect,
-  walletlink,
-  ledger,
-  trezor,
-  lattice,
-  frame,
-  authereum,
-  fortmatic,
-  magic,
-  portis,
-  torus
-} from '../connectors'
+import { injected } from '../connectors'
 import { Spinner } from '../components/Spinner'
+import { CONTRACT_ABIS, TEST_NFT_ADDRESS } from '../constant'
+import { Contract } from '@ethersproject/contracts';
 
 enum ConnectorNames {
-  Injected = 'Injected',
-  Network = 'Network',
-  WalletConnect = 'WalletConnect',
-  WalletLink = 'WalletLink',
-  Ledger = 'Ledger',
-  Trezor = 'Trezor',
-  Lattice = 'Lattice',
-  Frame = 'Frame',
-  Authereum = 'Authereum',
-  Fortmatic = 'Fortmatic',
-  Magic = 'Magic',
-  Portis = 'Portis',
-  Torus = 'Torus'
+  Injected = 'Injected'
 }
 
 const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Injected]: injected,
-  [ConnectorNames.Network]: network,
-  [ConnectorNames.WalletConnect]: walletconnect,
-  [ConnectorNames.WalletLink]: walletlink,
-  [ConnectorNames.Ledger]: ledger,
-  [ConnectorNames.Trezor]: trezor,
-  [ConnectorNames.Lattice]: lattice,
-  [ConnectorNames.Frame]: frame,
-  [ConnectorNames.Authereum]: authereum,
-  [ConnectorNames.Fortmatic]: fortmatic,
-  [ConnectorNames.Magic]: magic,
-  [ConnectorNames.Portis]: portis,
-  [ConnectorNames.Torus]: torus
 }
 
 function getErrorMessage(error: Error) {
   if (error instanceof NoEthereumProviderError) {
-    return 'No Ethereum browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.'
+    return 'No Qtum browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.'
   } else if (error instanceof UnsupportedChainIdError) {
     return "You're connected to an unsupported network."
   } else if (
-    error instanceof UserRejectedRequestErrorInjected ||
-    error instanceof UserRejectedRequestErrorWalletConnect ||
-    error instanceof UserRejectedRequestErrorFrame
+    error instanceof UserRejectedRequestErrorInjected
   ) {
-    return 'Please authorize this website to access your Ethereum account.'
+    return 'Please authorize this website to access your Qtum account.'
   } else {
     console.error(error)
     return 'An unknown error occurred. Check the console for more details.'
@@ -251,6 +211,37 @@ function App() {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector)
 
+  // account is not optional
+  const getSigner = (library: Web3Provider): JsonRpcSigner => {
+    return library.getSigner(account).connectUnchecked()
+  }
+  
+  // account is optional
+  const getProviderOrSigner = (library: Web3Provider): Web3Provider | JsonRpcSigner => {
+    return account ? getSigner(library) : library
+  }
+
+
+  const onHandleTestNFT = async () => {
+    const contractAddress = TEST_NFT_ADDRESS;
+    const contractAbi = CONTRACT_ABIS.ERC721_TEST_ABI;
+
+    // const nftContract = new Contract(contractAddress, contractAbi, getProviderOrSigner(library))
+    const nftContract = new Contract(contractAddress, contractAbi, library.getSigner(account).connectUnchecked());
+
+
+    const txHash = await nftContract.mint(account, 3); // 3 should be changed
+    // succeeded transaction hash => https://testnet.qtum.info/tx/563111a96ba2bbdc634e7f978d5bc7140cd31758027ff3c7dd8f9f45fe335cab
+    console.log('tx Hash ==>', txHash.toString());
+
+    const receipt = await txHash.wait();
+
+    console.log('receipt ==>', receipt);
+    // const nftContract = new Contract(contractAddress, contractAbi, library.getSigner(account).connectUnchecked())
+
+
+  }
+
   return (
     <>
       <Header />
@@ -347,113 +338,7 @@ function App() {
         }}
       >
         {!!(library && account) && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              library
-                .getSigner(account)
-                .signMessage('👋')
-                .then((signature: any) => {
-                  window.alert(`Success!\n\n${signature}`)
-                })
-                .catch((error: any) => {
-                  window.alert('Failure!' + (error && error.message ? `\n\n${error.message}` : ''))
-                })
-            }}
-          >
-            Sign Message
-          </button>
-        )}
-        {!!(connector === connectorsByName[ConnectorNames.Network] && chainId) && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).changeChainId(chainId === 1 ? 4 : 1)
-            }}
-          >
-            Switch Networks
-          </button>
-        )}
-        {connector === connectorsByName[ConnectorNames.WalletConnect] && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).close()
-            }}
-          >
-            Kill WalletConnect Session
-          </button>
-        )}
-        {connector === connectorsByName[ConnectorNames.WalletLink] && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).close()
-            }}
-          >
-            Kill WalletLink Session
-          </button>
-        )}
-        {connector === connectorsByName[ConnectorNames.Fortmatic] && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).close()
-            }}
-          >
-            Kill Fortmatic Session
-          </button>
-        )}
-        {connector === connectorsByName[ConnectorNames.Magic] && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).close()
-            }}
-          >
-            Kill Magic Session
-          </button>
-        )}
-        {connector === connectorsByName[ConnectorNames.Portis] && (
           <>
-            {chainId !== undefined && (
-              <button
-                style={{
-                  height: '3rem',
-                  borderRadius: '1rem',
-                  cursor: 'pointer'
-                }}
-                onClick={() => {
-                  ;(connector as any).changeNetwork(chainId === 1 ? 100 : 1)
-                }}
-              >
-                Switch Networks
-              </button>
-            )}
             <button
               style={{
                 height: '3rem',
@@ -461,26 +346,21 @@ function App() {
                 cursor: 'pointer'
               }}
               onClick={() => {
-                ;(connector as any).close()
+                library
+                  .getSigner(account)
+                  .signMessage('👋')
+                  .then((signature: any) => {
+                    window.alert(`Success!\n\n${signature}`)
+                  })
+                  .catch((error: any) => {
+                    window.alert('Failure!' + (error && error.message ? `\n\n${error.message}` : ''))
+                  })
               }}
             >
-              Kill Portis Session
+              Sign Message
             </button>
+            <button onClick={onHandleTestNFT}>Mint TestNFT</button>
           </>
-        )}
-        {connector === connectorsByName[ConnectorNames.Torus] && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              ;(connector as any).close()
-            }}
-          >
-            Kill Torus Session
-          </button>
         )}
       </div>
     </>
