@@ -2,6 +2,18 @@
 # yarn lockfile v1
 
 
+"@qweb3-react/abstract-connector@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@qweb3-react/abstract-connector/-/abstract-connector-0.2.0.tgz#c132702e69c1be9d07f4c137c8c3445777598b7c"
+  integrity sha512-MtQhExQN7v/8IeUixvk7Lew/k5mGOtmdGy5tHcTKP8OYu5MkvUvbArj7xwjEJC8ITnOQmA82HTsDD3sC+FfXyg==
+  dependencies:
+    "@qweb3-react/types" "^0.2.0"
+
+"@qweb3-react/types@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@qweb3-react/types/-/types-0.2.0.tgz#a5e43d83d24547134a61c4d98756545915b0d962"
+  integrity sha512-A0oM9jFreY9bXbMrHKoiJE9NCtRJtRgaBzg6mmodl2pkutn6Yhd23We/xGZmwQPlv6Xp/kX8PByCcdTz7xEQsg==
+
 tiny-warning@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
