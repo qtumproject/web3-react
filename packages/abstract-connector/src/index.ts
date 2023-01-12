@@ -1,5 +1,5 @@
 import { EventEmitter } from 'events'
-import { AbstractConnectorArguments, ConnectorUpdate, ConnectorEvent } from '@qweb3-react/types'
+import { AbstractConnectorArguments, ConnectorUpdate, ConnectorEvent } from '@qtum-web3-react/types'
 
 export abstract class AbstractConnector extends EventEmitter {
   public readonly supportedChainIds?: number[]

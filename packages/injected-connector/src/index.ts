@@ -1,5 +1,5 @@
-import { AbstractConnectorArguments, ConnectorUpdate } from '@qweb3-react/types'
-import { AbstractConnector } from '@qweb3-react/abstract-connector'
+import { AbstractConnectorArguments, ConnectorUpdate } from '@qtum-web3-react/types'
+import { AbstractConnector } from '@qtum-web3-react/abstract-connector'
 import warning from 'tiny-warning'
 
 import { SendReturnResult, SendReturn, Send, SendOld } from './types'

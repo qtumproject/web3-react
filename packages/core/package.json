@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "@ethersproject/keccak256": "^5.0.0-beta.130",
-    "@qweb3-react/abstract-connector": "^0.2.0",
-    "@qweb3-react/types": "^0.2.0",
+    "@qtum-web3-react/abstract-connector": "^0.0.3",
+    "@qtum-web3-react/types": "^0.0.3",
     "tiny-invariant": "^1.0.6",
     "tiny-warning": "^1.0.3"
   },

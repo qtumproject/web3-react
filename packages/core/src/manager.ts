@@ -1,6 +1,6 @@
 import { useReducer, useEffect, useCallback, useRef } from 'react'
-import { ConnectorUpdate, ConnectorEvent } from '@qweb3-react/types'
-import { AbstractConnector } from '@qweb3-react/abstract-connector'
+import { ConnectorUpdate, ConnectorEvent } from '@qtum-web3-react/types'
+import { AbstractConnector } from '@qtum-web3-react/abstract-connector'
 import warning from 'tiny-warning'
 
 import { Web3ReactManagerReturn } from './types'
