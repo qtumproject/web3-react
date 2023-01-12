@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "web3-react",
-  "description": "A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps",
+  "name": "qtum-web3-react",
+  "description": "A simple, maximally extensible, dependency minimized framework for building modern Qtum dApps",
   "keywords": [
     "react",
     "react-hooks",
     "hooks",
-    "ethereum",
+    "qtum",
     "javascript",
     "typescript",
     "web3",
@@ -14,19 +14,12 @@
     "frontend",
     "dapp",
     "metamask",
-    "walletconnect",
-    "walletlink",
-    "frame",
-    "fortmatic",
-    "portis",
-    "torus",
-    "authereum",
-    "magic"
+    "qnekt"
   ],
-  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "author": "<snowwhite91924@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/NoahZinsmeister/web3-react.git"
+    "url": "git://github.com/qtumproject/web3-react"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
