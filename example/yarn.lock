@@ -431,9 +431,9 @@
     "@qtum-web3-react/types" "^1.0.0"
 
 "@qtum-web3-react/core@latest":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-1.0.0.tgz#f22dc8f8f7d58eb690f28bc898a489785c09dacb"
-  integrity sha512-DL4AbITdW06gesBnutm8it4oDmX7UIrA9v36Ow0G63PkjjxtM+mTFH3Noe2pW0gKHyhhY4skSAI0N/tubLZGBw==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-1.0.1.tgz#5877ff94e74afd796fae24a1519f5aecc2b97f92"
+  integrity sha512-ZjtFGoUSjjNRkefHSzEi4UIskv+yJO5XsO5Xyqsi8+UkaJyGGpNL5ZRtwssTubOIcr10o+DQYEnQS01rgv3DSw==
   dependencies:
     "@ethersproject/keccak256" "^5.0.0-beta.130"
     "@qtum-web3-react/abstract-connector" "^1.0.0"
@@ -442,9 +442,9 @@
     tiny-warning "^1.0.3"
 
 "@qtum-web3-react/injected-connector@latest":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-1.0.0.tgz#5182b3c0b7f276039cc28d247910f09a2baba902"
-  integrity sha512-jWd9UN2kEvj+61rEIMDtF2dTtsjbQv5YejsMm0Qi6ovISAtrJOfoJc/XQi8cvAsECGD7UcqKnpSTTybs4Slxzg==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-1.0.1.tgz#e56170cf40e3a7c499b675844915e996ca4ad40e"
+  integrity sha512-+0+U48oLXm6YY6oaxIuD/ofDkv/GLtcyDBXI4r2tQuosNy+JQDGrsZnNvGhoj8iIJ+a5HeRD5J32cD6FtRWQOg==
   dependencies:
     "@qtum-web3-react/abstract-connector" "^1.0.0"
     "@qtum-web3-react/types" "^1.0.0"
@@ -488,9 +488,9 @@ brorand@^1.1.0:
   integrity sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==
 
 caniuse-lite@^1.0.30001406:
-  version "1.0.30001443"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001443.tgz#8fc85f912d5471c9821acacf9e715c421ca0dd1f"
-  integrity sha512-jUo8svymO8+Mkj3qbUbVjR8zv8LUGpGkUM/jKvc9SO2BvjCI980dp9fQbf/dyLs6RascPzgR4nhAKFA4OHeSaA==
+  version "1.0.30001445"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001445.tgz#cf2d4eb93f2bcdf0310de9dd6d18be271bc0b447"
+  integrity sha512-8sdQIdMztYmzfTMO6KfLny878Ln9c2M0fc7EH60IjlP4Dc4PiCy7K2Vl3ITmWgOyPgVQKa5x+UP/KqFsxj4mBg==
 
 elliptic@6.5.4:
   version "6.5.4"
