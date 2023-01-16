@@ -6,8 +6,8 @@
   },
   "dependencies": {
     "@ethersproject/experimental": "^5.5.0",
-    "@qtum-web3-react/core": "latest",
-    "@qtum-web3-react/injected-connector": "latest",
+    "@qtum-web3-react/core": "^1.0.4",
+    "@qtum-web3-react/injected-connector": "^1.0.4",
     "next": "^12.0.8",
     "react": ">=16.8",
     "react-dom": ">=16.8",

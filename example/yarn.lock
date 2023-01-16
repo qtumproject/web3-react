@@ -423,37 +423,37 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.3.4.tgz#d28ea15a72cdcf96201c60a43e9630cd7fda168f"
   integrity sha512-DQ20JEfTBZAgF8QCjYfJhv2/279M6onxFjdG/+5B0Cyj00/EdBxiWb2eGGFgQhrBbNv/lsvzFbbi0Ptf8Vw/bg==
 
-"@qtum-web3-react/abstract-connector@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/abstract-connector/-/abstract-connector-0.0.4.tgz#83a1f5f0aada8c741ebb36d81abf48cf8bc1cb2f"
-  integrity sha512-H2xiYu31Di361lZMo2cIpUSs/4iye8thpUTebNlbH7Gd5Z5Mo4+dcmugYMbH0U2j2fmx0PDRnX3t55Z5VoFqKw==
+"@qtum-web3-react/abstract-connector@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/abstract-connector/-/abstract-connector-1.0.0.tgz#1697a7e505b41402c662a781408914c64d89f8ad"
+  integrity sha512-vCWhwWKgc5l3zEwr+pkT9Crt0QcJcMTNkTImvFbOQgl1ML+9vNszo26mLe/X4KRLn/RqOqPgZM0KjylOxD6kSg==
   dependencies:
-    "@qtum-web3-react/types" "^0.0.4"
+    "@qtum-web3-react/types" "^1.0.0"
 
-"@qtum-web3-react/core@latest":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-0.0.4.tgz#82eeff1e1baa7caee30cb21c0aabfe1321e9e478"
-  integrity sha512-ziGlasul3FINJZU6kjU6agrGebEFU8pgb7aQHxdgDLYoyd66XigKRS7XJGgdDBvn7eKrq4jNNGEXLfg7JYD7Wg==
+"@qtum-web3-react/core@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/core/-/core-1.0.4.tgz#277191180bbd89863de62c575de09583eaff452f"
+  integrity sha512-wJLzJWk6dY1AZDTsJF8TI9kgFMaLreyRoky7HXr0T3sp3LfwCgaRAKjn/T3QNvu6cgDD5ncPKHklmlTwjy83jw==
   dependencies:
     "@ethersproject/keccak256" "^5.0.0-beta.130"
-    "@qtum-web3-react/abstract-connector" "^0.0.4"
-    "@qtum-web3-react/types" "^0.0.4"
+    "@qtum-web3-react/abstract-connector" "^1.0.0"
+    "@qtum-web3-react/types" "^1.0.0"
     tiny-invariant "^1.0.6"
     tiny-warning "^1.0.3"
 
-"@qtum-web3-react/injected-connector@latest":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-0.0.4.tgz#88c44b0b5c7dabeb595e0b6c5d557765e45aee44"
-  integrity sha512-2nBddbe9zjPWDIAvnnjItCduPpRlvusMqJdQIy19AqRv4pA7Hl+YKzo52vMiRK/0+7KnBs8Xz71QjC7o+D6BUg==
+"@qtum-web3-react/injected-connector@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-1.0.4.tgz#096d27c001b3a0025a847e88b232ec72e788a2af"
+  integrity sha512-6Eobt/HjK/tr21oJ3AueexyNKC5DGgWF00uq4vSlukZwvXrHEe8c4vmxY6iFz1GIdMJJsCg30Ty0p5O0lgPgpA==
   dependencies:
-    "@qtum-web3-react/abstract-connector" "^0.0.4"
-    "@qtum-web3-react/types" "^0.0.4"
+    "@qtum-web3-react/abstract-connector" "^1.0.0"
+    "@qtum-web3-react/types" "^1.0.0"
     tiny-warning "^1.0.3"
 
-"@qtum-web3-react/types@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/types/-/types-0.0.4.tgz#f9260e1ede1a827713774b6142bd85f615245caf"
-  integrity sha512-1VtiOkCYUBxXX7/AAJ1Na9qtCAHT3535eUDy7ObEf3Qc+Xvvf8SrqT4gp2jGq2Z/NzywV1Q4hADKKGr/SCGIwA==
+"@qtum-web3-react/types@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/types/-/types-1.0.0.tgz#0af3c70308740e6d739486ba2aec59ee9e1ec20f"
+  integrity sha512-mT7IHXqCbx3p2ajH4ZjRPjWaOQC+2Wlen3J3Wlmq2lznnLlFCpHz4lirojB1gGgMtmoQEEeMuhi8nPmRJwjnew==
 
 "@swc/helpers@0.4.11":
   version "0.4.11"
@@ -488,9 +488,9 @@ brorand@^1.1.0:
   integrity sha512-cKV8tMCEpQs4hK/ik71d6LrPOnpkpGBR0wzxqr68g2m/LB2GxVYQroAjMJZRVM1Y4BCjCKc3vAamxSzOY2RP+w==
 
 caniuse-lite@^1.0.30001406:
-  version "1.0.30001443"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001443.tgz#8fc85f912d5471c9821acacf9e715c421ca0dd1f"
-  integrity sha512-jUo8svymO8+Mkj3qbUbVjR8zv8LUGpGkUM/jKvc9SO2BvjCI980dp9fQbf/dyLs6RascPzgR4nhAKFA4OHeSaA==
+  version "1.0.30001445"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001445.tgz#cf2d4eb93f2bcdf0310de9dd6d18be271bc0b447"
+  integrity sha512-8sdQIdMztYmzfTMO6KfLny878Ln9c2M0fc7EH60IjlP4Dc4PiCy7K2Vl3ITmWgOyPgVQKa5x+UP/KqFsxj4mBg==
 
 elliptic@6.5.4:
   version "6.5.4"

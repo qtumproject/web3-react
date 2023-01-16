@@ -188,7 +188,6 @@ export class InjectedConnector extends AbstractConnector {
   }
 
   public async isAuthorized(): Promise<boolean> {
-    console.log("Uselesss ==>");
     if (!window.qtum) {
       return false
     }
