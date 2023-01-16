@@ -442,9 +442,9 @@
     tiny-warning "^1.0.3"
 
 "@qtum-web3-react/injected-connector@latest":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-1.0.1.tgz#e56170cf40e3a7c499b675844915e996ca4ad40e"
-  integrity sha512-+0+U48oLXm6YY6oaxIuD/ofDkv/GLtcyDBXI4r2tQuosNy+JQDGrsZnNvGhoj8iIJ+a5HeRD5J32cD6FtRWQOg==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@qtum-web3-react/injected-connector/-/injected-connector-1.0.2.tgz#28d9db0b167e5e30474986e3e7f2cefafef60159"
+  integrity sha512-ML0zlk3aPwRr42DuQl5bwXhRuVbTmf/D3/sasOKRT30OOW8J1lVw3qtJE2Pz1HEQOhGYhUuCrVN2t9z6781djQ==
   dependencies:
     "@qtum-web3-react/abstract-connector" "^1.0.0"
     "@qtum-web3-react/types" "^1.0.0"

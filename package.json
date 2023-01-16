@@ -19,7 +19,7 @@
   "author": "<snowwhite91924@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/qtumproject/web3-react"
+    "url": "git://github.com/qtumproject/web3-react.git"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
