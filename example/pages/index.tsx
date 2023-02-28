@@ -11,7 +11,8 @@ import { useEagerConnect, useInactiveListener } from '../hooks'
 import { injected } from '../connectors'
 import { Spinner } from '../components/Spinner'
 import { CONTRACT_ABIS, TEST_NFT_ADDRESS } from '../constant'
-import { Contract } from '@ethersproject/contracts';
+// import { Contract } from '@ethersproject/contracts';
+import { Contract } from 'ethers';
 
 enum ConnectorNames {
   Injected = 'Injected'
@@ -209,7 +210,7 @@ function App() {
   const triedEager = useEagerConnect()
 
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
-  useInactiveListener(!triedEager || !!activatingConnector)
+  // useInactiveListener(!triedEager || !!activatingConnector)
 
   // account is not optional
   const getSigner = (library: Web3Provider): JsonRpcSigner => {
@@ -226,15 +227,24 @@ function App() {
     const contractAddress = TEST_NFT_ADDRESS;
     const contractAbi = CONTRACT_ABIS.ERC721_TEST_ABI;
 
+    console.log("contractAddress ==>", contractAddress);
     const nftContract = new Contract(contractAddress, contractAbi, library.getSigner(account).connectUnchecked());
 
-    const txHash = await nftContract.mint(account, 3); // 3 should be changed
-    // succeeded transaction hash => https://testnet.qtum.info/tx/563111a96ba2bbdc634e7f978d5bc7140cd31758027ff3c7dd8f9f45fe335cab
-    console.log('tx Hash ==>', txHash.toString());
+    console.log("contractAddress ==>", account);
 
-    const receipt = await txHash.wait();
+    try {
+      const txHash = await nftContract.mint(account);
+      // succeeded transaction hash => https://testnet.qtum.info/tx/563111a96ba2bbdc634e7f978d5bc7140cd31758027ff3c7dd8f9f45fe335cab
+      console.log('tx Hash ==>', txHash.toString());
+      const receipt = await txHash.wait();
 
-    console.log('receipt ==>', receipt);
+      console.log('receipt ==>', receipt);
+    } catch (e) {
+      console.log("error ==>", e);
+    }
+   
+
+    
   }
 
   return (
